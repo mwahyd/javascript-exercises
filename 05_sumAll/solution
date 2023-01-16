@@ -1,0 +1,19 @@
+const sumAll = function (min, max) {
+  let total = 0;
+  if (min > max) {
+    [min, max] = [max, min];
+  } else if (typeof min !== "number" || typeof max !== "number") {
+    return "ERROR";
+  } else if (min < 0 || max < 0) return "ERROR";
+
+  for (let i = min; i <= max; i++) {
+    total += i;
+  }
+  return total;
+};
+
+result = sumAll(1, 4);
+console.log(result);
+
+// Do not edit below this line
+module.exports = sumAll;
