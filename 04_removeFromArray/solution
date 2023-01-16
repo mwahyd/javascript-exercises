@@ -1,0 +1,14 @@
+const removeFromArray = function (list, ...toRemove) {
+  for (const num of toRemove) {
+    if (list.includes(num)) {
+      list.splice(list.indexOf(num), 1);
+    }
+  }
+  return list;
+};
+
+result = removeFromArray([1, 2, 3, 4, 5], 3, 5);
+console.log(result);
+
+// Do not edit below this line
+module.exports = removeFromArray;
