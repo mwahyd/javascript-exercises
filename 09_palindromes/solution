@@ -1,0 +1,10 @@
+const palindromes = function (string) {
+  const punctuations = [",", ".", "!", "?", ":", ";", " "];
+  const characters = string.toLowerCase().split("");
+  for (const char of characters.slice()) {
+    if (punctuations.includes(char))
+      characters.splice(characters.indexOf(char), 1);
+  }
+  if (characters.join("") === characters.reverse().join("")) return true;
+  return false;
+};
