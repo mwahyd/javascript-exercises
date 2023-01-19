@@ -16,14 +16,14 @@ const fibonacci = function (range) {
 2) Using Fibonacci expression:
 function fibonacci(n) {
   const sequence = [0, 1];
-  if (n == 0) return 0;
-  else if (n == 1) return 1;
-  else if (n >= 2) {
+  if (n == 0) return sequence[0];
+  else if (n >= 1) {
     let total = 0;
     for (let i = 2; i <= n; i++) {
       total = sequence[i - 1] + sequence[i - 2];
       sequence.push(total);
     }
+    console.log(sequence);
     return sequence.at(-1);
   }
   return "OOPS";
