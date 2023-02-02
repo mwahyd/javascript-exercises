@@ -1,0 +1,10 @@
+const findTheOldest = function (array) {
+  array.map((person) => {
+    if (person.yearOfBirth && person.yearOfDeath)
+      person["age"] = person.yearOfDeath - person.yearOfBirth;
+    if (!person.yearOfDeath)
+      person["age"] = new Date().getFullYear() - person.yearOfBirth;
+  });
+  array.sort((a, b) => (a.age > b.age ? 1 : -1));
+  return array.at(-1);
+};
