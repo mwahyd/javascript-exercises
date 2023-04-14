@@ -29,6 +29,18 @@ function fibonacci(n) {
   return "OOPS";
 }
 
+3) Concise solution:
+function fibonacci(number) {
+  if (number < 0) return "OOPS";
+  const fibSeq = [0, 1];
+  for (let i = 1; i < number; i++) {
+    const newNum = fibSeq[fibSeq.length - 1] + fibSeq[fibSeq.length - 2];
+    fibSeq.push(newNum);
+  }
+  console.log(fibSeq);
+  return fibSeq[number];
+}
+
 
 
 TOP Solution
